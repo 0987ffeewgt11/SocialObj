@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>SocPublic</h1>
+    <nav>
+      <a href="/">Главная</a>
+      <a href="/profile/dashboard">Профиль</a>
+      <a href="/logout">Выйти</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Добро пожаловать, <%= user.username %>!</h2>
+    <div class="profile-info">
+      <p>Email: <%= user.email %></p>
+      <p>Дата регистрации: <%= user.createdAt.toLocaleDateString() %></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 SocPublic Clone</p>
+  </footer>
+</body>
+</html>
